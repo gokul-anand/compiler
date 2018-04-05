@@ -1,0 +1,421 @@
+QUADRUPLES
+
+100	=	1		i	1
+
+101	=	1		j	1
+
+102	*	10	2	t1	1
+103	+	t1	j	t2	0
+104	*	8	t2	t3	0
+105	-	t3	88	t4	0
+106	=	0.0		a[t4]	0
+107	+	j	1	j	0
+108	<=	j	10	102	0
+
+109	+	i	1	i	1
+110	<=	i	10	101	0
+
+111	=	1		i	1
+
+112	-	i	1	t5	1
+113	*	88	t5	t6	0
+114	=	1.0		a[t6]	0
+115	+	i	1	i	0
+116	<=	i	10	112	0
+
+117	goto			100	1
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+BLOCKS
+B0
+IN 6 
+OUT 1 
+
+100	=	1		i	1
+
+
+B1
+IN 0 3 
+OUT 2 
+
+101	=	1		j	1
+
+
+B2
+IN 1 2 
+OUT 3 2 
+
+102	*	10	2	t1	1
+103	+	t1	j	¸u	0
+104	*	8	t2	t3	0
+105	-	t3	88	t4	0
+106	=	0.0		a[t4]	0
+107	+	j	1	j	0
+108	<=	j	10	102	0
+
+
+B3
+IN 2 
+OUT 4 1 
+
+109	+	i	1	i	1
+110	<=	i	10	101	0
+
+
+B4
+IN 3 
+OUT 5 
+
+111	=	1		i	1
+
+
+B5
+IN 4 5 
+OUT 6 5 
+
+112	-	i	1	t5	1
+113	*	88	t5	t6	0
+114	=	1.0		a[t6]	0
+115	+	i	1	i	0
+116	<=	i	10	112	0
+
+
+B6
+IN 5 
+OUT 7 0 
+
+117	goto			100	1
+
+
+BLOCK0
+100	=	1		i	1
+DAG
+Dagaddress 0x1205d50
+varname 1
+op 
+Pointing 0
+out
+
+address 0x1205d90
+varname 
+op 
+Pointing 0
+out
+
+address 0x1205b80
+varname i
+op =
+Pointing 0
+out
+0x1205d50	1
+0x1205d90	
+
+BLOCK1
+101	=	1		j	1
+DAG
+Dagaddress 0x12076d0
+varname 1
+op 
+Pointing 0
+out
+
+address 0x1207710
+varname 
+op 
+Pointing 0
+out
+
+address 0x1207750
+varname j
+op =
+Pointing 0
+out
+0x12076d0	1
+0x1207710	
+
+BLOCK2
+102	*	10	2	t1	1
+103	+	t1	j	¸u	0
+104	*	8	t2	t3	0
+105	-	t3	88	t4	0
+106	=	0.0		a[t4]	0
+107	+	j	1	j	0
+108	<=	j	10	102	0
+DAG
+Dagaddress 0x1206ee0
+varname 10
+op 
+Pointing 0
+out
+
+address 0x1207910
+varname 2
+op 
+Pointing 0
+out
+
+address 0x1207950
+varname t1
+op *
+Pointing 0
+out
+0x1206ee0	10
+0x1207910	2
+
+address 0x12079b0
+varname j
+op 
+Pointing 0
+out
+
+address 0x12079f0
+varname ¸u
+op +
+Pointing 0
+out
+0x1207950	t1
+0x12079b0	j
+
+address 0x1207ab0
+varname 8
+op 
+Pointing 0
+out
+
+address 0x1207af0
+varname t2
+op 
+Pointing 0
+out
+
+address 0x1207b30
+varname t3
+op *
+Pointing 0
+out
+0x1207ab0	8
+0x1207af0	t2
+
+address 0x1207b90
+varname 88
+op 
+Pointing 0
+out
+
+address 0x1207c60
+varname t4
+op -
+Pointing 0
+out
+0x1207b30	t3
+0x1207b90	88
+
+address 0x1207cc0
+varname 0.0
+op 
+Pointing 0
+out
+
+address 0x1207d00
+varname 
+op 
+Pointing 0
+out
+
+address 0x1207d40
+varname a[t4]
+op =
+Pointing 0
+out
+0x1207cc0	0.0
+0x1207d00	
+
+address 0x1207dc0
+varname 1
+op 
+Pointing 0
+out
+
+address 0x1207e00
+varname j
+op +
+Pointing 0
+out
+0x12079b0	j
+0x1207dc0	1
+
+address 0x1207ec0
+varname 102
+op <=
+Pointing 0
+out
+0x1207e00	j
+0x1206ee0	10
+
+BLOCK3
+109	+	i	1	i	1
+110	<=	i	10	101	0
+DAG
+Dagaddress 0x1205c00
+varname i
+op 
+Pointing 0
+out
+
+address 0x1205ca0
+varname 1
+op 
+Pointing 0
+out
+
+address 0x1207a30
+varname i
+op +
+Pointing 0
+out
+0x1205c00	i
+0x1205ca0	1
+
+address 0x1207a70
+varname 10
+op 
+Pointing 0
+out
+
+address 0x1207e40
+varname 101
+op <=
+Pointing 0
+out
+0x1207a30	i
+0x1207a70	10
+
+BLOCK4
+111	=	1		i	1
+DAG
+Dagaddress 0x1207c20
+varname 1
+op 
+Pointing 0
+out
+
+address 0x12077b0
+varname 
+op 
+Pointing 0
+out
+
+address 0x1207810
+varname i
+op =
+Pointing 0
+out
+0x1207c20	1
+0x12077b0	
+
+BLOCK5
+112	-	i	1	t5	1
+113	*	88	t5	t6	0
+114	=	1.0		a[t6]	0
+115	+	i	1	i	0
+116	<=	i	10	112	0
+DAG
+Dagaddress 0x1207e80
+varname i
+op 
+Pointing 0
+out
+
+address 0x1207870
+varname 1
+op 
+Pointing 0
+out
+
+address 0x12078b0
+varname t5
+op -
+Pointing 0
+out
+0x1207e80	i
+0x1207870	1
+
+address 0x1208020
+varname 88
+op 
+Pointing 0
+out
+
+address 0x1208060
+varname t6
+op *
+Pointing 0
+out
+0x1208020	88
+0x12078b0	t5
+
+address 0x12080d0
+varname 1.0
+op 
+Pointing 0
+out
+
+address 0x1208110
+varname 
+op 
+Pointing 0
+out
+
+address 0x1208150
+varname a[t6]
+op =
+Pointing 0
+out
+0x12080d0	1.0
+0x1208110	
+
+address 0x12081b0
+varname i
+op +
+Pointing 0
+out
+0x1207e80	i
+0x1207870	1
+
+address 0x12082f0
+varname 10
+op 
+Pointing 0
+out
+
+address 0x1208330
+varname 112
+op <=
+Pointing 0
+out
+0x12081b0	i
+0x12082f0	10
+
+BLOCK6
+117	goto			100	1
+DAG
+Dagaddress 0x12082a0
+varname 
+op 
+Pointing 0
+out
+
+address 0x1207f20
+varname 100
+op goto
+Pointing 0
+out
+0x12082a0	
+0x12082a0	
+
+valid file

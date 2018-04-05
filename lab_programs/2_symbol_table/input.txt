@@ -1,0 +1,18 @@
+{
+	int a,b,c;
+	float dr,ol;
+	int a;
+	{
+		char cae;
+		double aer;
+	}
+	
+	{
+		
+		int uni;
+	}
+	
+	{
+		int B;
+	}
+}

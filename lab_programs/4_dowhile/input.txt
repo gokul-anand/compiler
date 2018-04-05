@@ -1,0 +1,17 @@
+do
+{
+	ia;
+	do
+	{
+		ib;		
+		do
+		{
+			nestnest;
+		}while(c4);
+		
+	}while(c2);
+}while(c1);
+do
+{
+	mr;
+}while(c3);

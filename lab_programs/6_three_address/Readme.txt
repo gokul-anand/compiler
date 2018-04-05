@@ -1,0 +1,5 @@
+This program is to convert a expression into 3 address statements.
+
+The grammer used is given in the book
+
+This doesnot deals with array references
